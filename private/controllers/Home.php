@@ -5,7 +5,7 @@
 class Home extends Controller{
     function index()
     {
-        echo "this is form the home controller!";   
+        echo $this->view("home");
     }
     
 }
