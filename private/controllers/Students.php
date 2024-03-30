@@ -3,11 +3,8 @@
 * Students controller 
 */
 class Students extends Controller{
-    function index($id = "")
+    function index()
     {
-        echo "this is the student number ".$id;   
-    }
-    function add(){
-        
+        echo $this->view("Students");
     }
 }
