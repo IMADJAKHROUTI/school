@@ -1,7 +1,7 @@
 <?php $this->view("includes/head") ?>
-<div class="container-fluid h-full w-full">
+<div class="container-fluid  h-full w-full">
     <div class="m-auto max-w-sm shadow-md p-4">
-        <form action="" class="flex flex-column gap-3">
+        <form action="" class="flex flex-col gap-3">
             <h1 class="">Ajouter utilsateur</h1>
             <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom">
             <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom">
@@ -23,8 +23,8 @@
 
 
 
-
-            <input type="submit" class="form-control btn btn-primary" value="Connexion">
+            <input type="reset" class="form-control btn bg-red-600 text-white" value="Annuler">
+            <input type="submit" class="form-control btn btn-primary" value="Inscreption">
 
 
         </form>
