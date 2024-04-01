@@ -3,7 +3,7 @@
     $this->view("includes/nav")
 ?>
 
-<div class="container-fluid p-4  shadow max-w-5xl">
+<div class="container-fluid p-4 bg-white h-auto shadow-sm max-w-5xl mt-28">
     <?php $this->view("includes/breadcrumb")?>
     <div class="row  ">
         <div class="col-sm-4 flex items-center">

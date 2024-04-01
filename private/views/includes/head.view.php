@@ -11,4 +11,4 @@
 </head>
 
 <body>
-    <div class="container-fluid all p-0 w-screen h-screen mx-auto my-0 max-w-7xl">
+    <div class="container-fluid all flex relative items-start p-0 w-screen h-screen mx-auto my-0 max-w-7xl">
