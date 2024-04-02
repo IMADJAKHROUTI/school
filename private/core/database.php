@@ -6,11 +6,10 @@ class Database
 {
     private function connect()
     {
-        $dbs = "mysql:host=localhost;dbname=school";
-        $user = "root";
-        $password = "";
+        $dbs = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
+       
         try{
-            $conn = new PDO($dbs,$user,$password);
+            $conn = new PDO($dbs,DB_USER,DB_PASS);
             return $conn ;
         }
         catch(PDOException $e){

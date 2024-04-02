@@ -6,6 +6,8 @@ class Home extends Controller
 {
     function index()
     {
-        $this->view("home");
+        $user = $this->load_model("User");
+        $data = $user->query("nom","jakhrouti");
+        $this->view(" home",['rows'=>$data]);
     }
 }
