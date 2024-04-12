@@ -17,7 +17,7 @@ class Controller{
     public function load_model($model){
         if(file_exists("../private/models/".ucfirst($model).".php")){
             require("../private/models/".ucfirst($model).".php");
-            return $model = new $model();
+            return new $model();
         }
         return false;
         
