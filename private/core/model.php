@@ -28,5 +28,19 @@ class Model extends Database
         $query = "INSERT INTO $this->table($columns) VALUES (:$values) ";
         return $this->query($query,$data);
     }
+
+    public function update($id,$data){
+        $data['id'] = $id;
+        $str = "";
+        foreach($data as $key => $value){
+            $str .= $key . "=:" . $value;
+        }
+        $str = trim($str,",");
+        $data['id'] = $id;
+        
+        $query = "UPDATE $this->table SET $str WHERE id =:id";
+        return $this->query($query,$data);
+    }
+
     
 }
