@@ -15,4 +15,9 @@ class Model extends Database
         return $this->query($query,['value'=>$value]);
     }
 
+    public function findAll(){
+        $query = "SELECT * FROM $this->table ";
+        return $this->query($query);
+    }
+
 }
