@@ -41,6 +41,12 @@ class Model extends Database
         $query = "UPDATE $this->table SET $str WHERE id =:id";
         return $this->query($query,$data);
     }
+    
+    public function delete($id){
+        $query = "DELETE FROM $this->table WHERE id =:id";
+        $data['id'] = $id;
+        return $this->query($query,$data);
+    }
 
     
 }
