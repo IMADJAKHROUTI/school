@@ -4,6 +4,16 @@
 */
 class User extends Model
 {
+    protected $allowedColumns = [
+        'nom',
+        'prenom',
+        'email',
+        'password',
+        'genre',
+        'role',
+        'date',
+        // 'user_id',
+    ];
     protected $beforeInsert = [
         'make_user_id',
         'make_school_id',

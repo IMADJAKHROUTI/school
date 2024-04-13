@@ -23,6 +23,14 @@ class Model extends Database
     }
 
     public function insert($data){
+        //? remove unwanted columns before insert
+        if(property_exists($this,'allowedColumns')){
+            foreach($data as $key => $columns){
+                if(!in_array($key , $this->allowedColumns)){
+                    unset($data[$key]);
+                }
+            }
+        }
 
          //? run function before insert
          if(property_exists($this,'beforeInsert')){
