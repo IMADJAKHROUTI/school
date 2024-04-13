@@ -23,6 +23,13 @@ class Model extends Database
     }
 
     public function insert($data){
+
+         //? run function before insert
+         if(property_exists($this,'beforeInsert')){
+            foreach($this->beforeInsert as $func){
+                $data = $this->$func($data);
+            }
+        }
         
         $keys = array_keys(($data));
         $columns = implode(",",$keys);
