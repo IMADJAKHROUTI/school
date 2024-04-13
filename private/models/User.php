@@ -49,4 +49,10 @@ class User extends Model
         $data['user_id'] =  bin2hex(random_bytes(64));
         return $data;
     }
+    public function make_school_id($data){
+        if(isset($_SESSION['USER']->school_id)){
+            $data['school_id'] = $_SESSION['USER']->school_id;
+        }
+        return $data;
+    }
 }
