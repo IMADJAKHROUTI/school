@@ -4,6 +4,11 @@
 */
 class User extends Model
 {
+    protected $beforeInsert = [
+        'make_user_id',
+        'make_school_id',
+        'hash_password'
+    ];
     public function validate($POST){
         $this->errors = array();
 
@@ -39,5 +44,9 @@ class User extends Model
             return true;
         }
         return false;
+    }
+    public function make_user_id($data){
+        $data['user_id'] =  bin2hex(random_bytes(64));
+        return $data;
     }
 }
