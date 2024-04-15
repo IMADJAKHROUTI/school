@@ -1,6 +1,6 @@
 <?php  
     $this->view("includes/head");
-    $this->view("includes/nav")
+    $this->view("includes/sidebar")
 ?>
 
 <div class="container-fluid p-4 bg-white h-auto shadow-sm max-w-5xl mt-28">

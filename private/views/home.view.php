@@ -1,5 +1,5 @@
 <?php  $this->view("includes/head");
- $this->view("includes/nav");
+ $this->view("includes/sidebar");
 
 
  echo "<pre>";
