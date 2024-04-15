@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ASSETS?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=ASSETS?>/css/style.css">
-    <link rel="stylesheet" href="<?=ASSETS?>/css/output.css">
-    <title>page web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <title>School</title>
 </head>
 
 <body>
-    <div class="container-fluid all flex relative items-start p-0 w-screen h-screen mx-auto my-0 max-w-7xl">
+<div class="container-fluid p-0 min-vh-100 d-flex flex-column">
