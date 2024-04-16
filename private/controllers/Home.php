@@ -1,13 +1,17 @@
 <?php
 /*
-* home controller 
+* Logout controller 
 */
 class Home extends Controller
 {
     function index()
-    {
-        $user = $this->load_model("User");
-        $data = $user->findAll();
-        $this->view("home",['rows'=>$data]);
+    { 
+        if(!Auth::logged()){
+            $this->redirect("login");
+        }
+        $user = $this->load_model('user');
+        $data = $user ->findAll();
+        $this -> view('home',['rows' => $data]);
+
     }
 }
