@@ -2,6 +2,7 @@
 /*
 * USER Model 
 */
+
 class User extends Model
 {
     protected $allowedColumns = [
@@ -19,6 +20,7 @@ class User extends Model
         'make_school_id',
         'hash_password'
     ];
+
     public function validate($POST){
         $this->errors = array();
 
@@ -32,6 +34,9 @@ class User extends Model
 
         if(empty($POST['email']) || !filter_var( $POST['email'],FILTER_VALIDATE_EMAIL)){
             $this->errors['email'] = "Email not valid";
+        }
+        if($this->where('email',$POST['email'])){
+            $this->errors['email'] = "Email deja exist dans la base de donnee";
         }
 
         $genre = ['female','male'];
@@ -55,6 +60,7 @@ class User extends Model
         }
         return false;
     }
+
     public function make_user_id($data){
         $data['user_id'] =  bin2hex(random_bytes(64));
         return $data;
