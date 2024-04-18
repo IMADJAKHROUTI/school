@@ -35,7 +35,7 @@
                 </div>
                 <a href="#"> Mot de passe oublié</a>
             </div>
-            <div class="mb-3">
+            <div class="login-input mb-3">
                 <input type="submit" class="form-control btn btn-primary" value="Connexion">
             </div>
             <div class="signin d-flex justify-content-around small mb-3">Vous avez pas un compte ? <a href="#">Inscription</a></div>

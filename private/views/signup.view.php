@@ -29,28 +29,30 @@
                 <span class="error-message"><?= $errors['email'] ?></span>
                 <?php endif; ?>
             </div>
-            <div class="signup-input mb-3">
-                <select name="genre" id="genre" class="form-control" required>
-                    <option hidden <?= get_select("genre", "") ?> value="">-- Genre --</option>
-                    <option <?= get_select("genre", "male") ?> value="male">Male</option>
-                    <option <?= get_select("genre", "female") ?> value="female">Female</option>
-                </select>
-                <?php if (isset($errors['genre'])) : ?>
-                <span class="error-message"><?= $errors['genre'] ?></span>
-                <?php endif; ?>
-            </div>
-            <div class="signup-input mb-3">
-                <select name="role" id="role" class="form-control" required>
-                    <option hidden <?= get_select("role", "") ?> value="">-- Role--</option>
-                    <option <?= get_select("role", "etudiant") ?> value="etudiant">Etudiant</option>
-                    <option <?= get_select("role", "reception") ?> value="reception">Reception</option>
-                    <option <?= get_select("role", "professeur") ?> value="professeur">Professeur</option>
-                    <option <?= get_select("role", "admin") ?> value="admin">Admin</option>
-                    <option <?= get_select("role", "super_admin") ?> value="super_admin">Super_admin</option>
-                </select>
-                <?php if (isset($errors['role'])) : ?>
-                <span class="error-message"><?= $errors['role'] ?></span>
-                <?php endif; ?>
+            <div class="gender-role">
+                <div class="signup-input mb-3">
+                    <select name="genre" id="genre" class="form-control" required>
+                        <option hidden selected<?= get_select("genre", "") ?> value="">-- Genre --</option>
+                        <option <?= get_select("genre", "male") ?> value="male">Male</option>
+                        <option <?= get_select("genre", "female") ?> value="female">Female</option>
+                    </select>
+                    <?php if (isset($errors['genre'])) : ?>
+                    <span class="error-message"><?= $errors['genre'] ?></span>
+                    <?php endif; ?>
+                </div>
+                <div class="signup-input mb-3">
+                    <select name="role" id="role" class="form-control" required>
+                        <option hidden selected<?= get_select("role", "") ?> value="">-- Role--</option>
+                        <option <?= get_select("role", "etudiant") ?> value="etudiant">Etudiant</option>
+                        <option <?= get_select("role", "reception") ?> value="reception">Reception</option>
+                        <option <?= get_select("role", "professeur") ?> value="professeur">Professeur</option>
+                        <option <?= get_select("role", "admin") ?> value="admin">Admin</option>
+                        <option <?= get_select("role", "super_admin") ?> value="super_admin">Super_admin</option>
+                    </select>
+                    <?php if (isset($errors['role'])) : ?>
+                    <span class="error-message"><?= $errors['role'] ?></span>
+                    <?php endif; ?>
+                </div>
             </div>
             <div class="signup-input mb-3">
                 <input type="password" class="form-control" value="<?= get_var('password') ?>" name="password"

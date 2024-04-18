@@ -51,13 +51,28 @@ input:focus {
   box-shadow: none !important;
   border-color: none;
 }
+
 .errors {
   color: red;
   font-size: 13px;
   padding-left: 0.5rem;
 }
-input[type="submit"] {
+
+input, select {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.signin-input input[type="submit"] {
   background-color: #4169e1 !important;
+}
+
+.signup-input input[type="submit"] {
+  background-color: #1aa06d !important;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  font-size: 1rem !important;
 }
 
 :root {
@@ -253,9 +268,8 @@ section {
   background-color: transparent;
 }
 
-.login,
-.signup {
-  max-width: 23rem;
+.login, .signup {
+  max-width: 27rem;
 }
 
 .card-title {

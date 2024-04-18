@@ -11,10 +11,6 @@ body {
   align-items: center;
 }
 
-.container-fluid {
-  padding: 50px;
-}
-
 .login-input {
   display: flex;
   align-items: flex-start;
