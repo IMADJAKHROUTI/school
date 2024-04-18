@@ -20,7 +20,7 @@ class School extends Model
         $this->errors = array();
 
         if (empty($POST['school']) || !preg_match("/^[a-zA-Z]+$/", $POST['school'])) {
-            $this->errors['school'] = "Just les caractere";
+            $this->errors['school'] = "Uniquement des caractères!";
         }
 
         if (count($this->errors) == 0) {

@@ -17,11 +17,11 @@ class Login extends Controller
                     $this->redirect('/home');
                 }
                 else{
-                    $errors['password'] = "Password inccorect";
+                    $errors['password'] = "Mot de passe inccorect!";
                 }
                 
            }else{
-            $errors['email'] = "email introuvabale";
+            $errors['email'] = "Adresse email introuvabale!";
            }
         }
 

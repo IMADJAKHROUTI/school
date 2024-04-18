@@ -25,35 +25,35 @@ class User extends Model
         $this->errors = array();
 
         if(empty($POST['nom']) || !preg_match("/^[a-zA-Z]+$/",$POST['nom'])){
-            $this->errors['nom'] = "Just les caractere";
+            $this->errors['nom'] = "Uniquement des caractères!";
         }
 
         if(empty($POST['prenom']) || !preg_match("/^[a-zA-Z]+$/",$POST['prenom'])){
-            $this->errors['prenom'] = "Just les caractere";
+            $this->errors['prenom'] = "Uniquement des caractères!";
         }
 
         if(empty($POST['email']) || !filter_var( $POST['email'],FILTER_VALIDATE_EMAIL)){
-            $this->errors['email'] = "Email not valid";
+            $this->errors['email'] = "Adresse email invalide!";
         }
         if($this->where('email',$POST['email'])){
-            $this->errors['email'] = "Email deja exist dans la base de donnee";
+            $this->errors['email'] = "Adresse email déja prise!";
         }
 
         $genre = ['female','male'];
         if(empty($POST['genre']) || !in_array($POST['genre'],$genre)){
-            $this->errors['genre'] = "genre invalide";
+            $this->errors['genre'] = "Genre invalide!";
         }
         $genre = ['etudiant','reception','professeur','admin',"super_admin"];
         if(empty($POST['role']) || !in_array($POST['role'],$genre)){
-            $this->errors['role'] = "role invalide";
+            $this->errors['role'] = "Role invalide!";
         }
 
         if(empty($POST['password'])||($POST['password'] !== $POST['password2'])){
-            $this->errors['password'] = "The passwords don't match";
+            $this->errors['password'] = "Les mots de passe doivent être similaires!";
         }
 
         if(strlen($POST["password"]) < 8){
-            $this->errors['password'] = "The passwords must be at least 8 caractere long";
+            $this->errors['password'] = "Le mot de passe doit comporter au moins 8 caractères!";
         }
         if(count($this->errors) == 0){
             return true;

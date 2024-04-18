@@ -6,14 +6,14 @@
             <div class="login-message small mb-3">Connectez-vous maintenant et obtenez un accès complet à notre
                 application.</div>
             <div class="login-input mb-3">
-                <input type="email" class="form-control" name="email" id="email" value="<?= get_var('email') ?>" placeholder="Email">
+                <input type="email" class="form-control" name="email" id="email" value="<?= get_var('email') ?>" placeholder="Email" required>
                 <?php if (isset($errors['email'])) : ?>
-                    <span class="text-danger"><?= $errors['email'] ?></span>
+                    <span class="error-message"><?= $errors['email'] ?></span>
                 <?php endif; ?>
             </div>
             <div class="login-input mb-3">
                 <div class="password-eye">
-                    <input type="password" class="form-control" name="password" id="password" value="<?= get_var('password') ?>" placeholder="Mot de passe">
+                    <input type="password" class="form-control" name="password" id="password" value="<?= get_var('password') ?>" placeholder="Mot de passe" required>
                     <svg xmlns="http://www.w3.org/2000/svg" class="show-password" height="1.5em" viewBox="0 0 24 24">
                         <path fill="var(--bs-gray-800)" d="M12 9.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5" />
                         <path fill="var(--bs-gray-800)" fill-rule="evenodd" d="M12 5.5c-2.618 0-4.972 1.051-6.668 2.353c-.85.652-1.547 1.376-2.036 2.08c-.48.692-.796 1.418-.796 2.067c0 .649.317 1.375.796 2.066c.49.705 1.186 1.429 2.036 2.08C7.028 17.45 9.382 18.5 12 18.5c2.618 0 4.972-1.051 6.668-2.353c.85-.652 1.547-1.376 2.035-2.08c.48-.692.797-1.418.797-2.067c0-.649-.317-1.375-.797-2.066c-.488-.705-1.185-1.429-2.035-2.08C16.972 6.55 14.618 5.5 12 5.5M8.25 12a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0" clip-rule="evenodd" />
@@ -24,7 +24,7 @@
                     </svg>
                 </div>
                 <?php if (isset($errors['password'])) : ?>
-                    <span class="text-danger"><?= $errors['password'] ?></span>
+                    <span class="error-message"><?= $errors['password'] ?></span>
                 <?php endif; ?>
             </div>
             <div class="remember-forgot small mb-3">
@@ -38,7 +38,7 @@
             <div class="mb-3">
                 <input type="submit" class="form-control btn btn-primary" value="Connexion">
             </div>
-            <div class="signin small mb-3">Vous avez pas un compte ? <a href="#">&nbsp; Inscription</a></div>
+            <div class="signin d-flex justify-content-around small mb-3">Vous avez pas un compte ? <a href="#">Inscription</a></div>
         </form>
     </div>
 </div>
