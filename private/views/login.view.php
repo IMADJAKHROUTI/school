@@ -34,7 +34,7 @@
             <div class="mb-3">
                 <input type="submit" class="form-control btn btn-primary" value="Connexion">
             </div>
-            <div class="signin small mb-3">Vous avez déjà un compte ? <a href="#">&nbsp; Inscription</a></div>
+            <div class="signin small mb-3">Vous avez pas un compte ? <a href="#">&nbsp; Inscription</a></div>
         </form>
     </div>
 </div>
