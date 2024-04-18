@@ -3,6 +3,8 @@
     <div class="signup m-auto card max-w-sm shadow-sm p-4">
         <form action="" method="post">
             <h1 class="h3">Ajouter utilisateur</h1>
+            <div class="login-message small mb-3">Élargissez votre communauté avec facilité : Ajoutez un membre dès
+                maintenant.</div>
             <div class="full-name">
                 <div class="signup-input mb-3">
                     <input type="text" class="form-control" value="<?= get_var('nom') ?>" name="nom" id="nom"
@@ -29,7 +31,7 @@
             </div>
             <div class="signup-input mb-3">
                 <select name="genre" id="genre" class="form-control">
-                    <option <?= get_select("genre", "") ?> value="">-- Selectionner genre --</option>
+                    <option hidden <?= get_select("genre", "") ?> value="">-- Genre --</option>
                     <option <?= get_select("genre", "male") ?> value="male">Male</option>
                     <option <?= get_select("genre", "female") ?> value="female">Female</option>
                 </select>
@@ -39,7 +41,7 @@
             </div>
             <div class="signup-input mb-3">
                 <select name="role" id="role" class="form-control">
-                    <option <?= get_select("role", "") ?> value="">-- Selectionner role--</option>
+                    <option hidden <?= get_select("role", "") ?> value="">-- Role--</option>
                     <option <?= get_select("role", "etudiant") ?> value="etudiant">Etudiant</option>
                     <option <?= get_select("role", "reception") ?> value="reception">Reception</option>
                     <option <?= get_select("role", "professeur") ?> value="professeur">Professeur</option>

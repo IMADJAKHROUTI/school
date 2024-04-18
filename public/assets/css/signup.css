@@ -28,21 +28,8 @@ body {
   gap: 1rem;
 }
 
-.password-eye {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-svg.show-password,
-svg.hide-password {
-  position: absolute;
-  right: 0.75rem;
-}
-
-.remember-forgot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.signup-input select {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
 }
