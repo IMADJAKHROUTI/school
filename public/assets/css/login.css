@@ -15,19 +15,23 @@ body {
   padding: 50px;
 }
 
-.mb-3 {
+.login-input {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.password-eye {
   display: flex;
   align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-svg.show-password {
-  position: absolute;
-  right: 2rem;
-}
-
+svg.show-password,
 svg.hide-password {
   position: absolute;
-  right: 2rem;
+  right: 0.75rem;
 }
 
 .remember-forgot {

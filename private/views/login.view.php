@@ -1,28 +1,31 @@
 <?php $this->view("includes/head"); ?>
-<div class="container-fluid h-full w-full">
+<div class="container-fluid d-flex h-100 v-100">
     <div class="login m-auto card max-w-sm shadow-sm p-4">
         <form action="" class="flex flex-col gap-3" method="post">
             <h1 class="">Bienvenue</h1>
             <div class="login-message small mb-3">Connectez-vous maintenant et obtenez un accès complet à notre
                 application.</div>
             <div class="login-input mb-3">
-                <input type="email" class="form-control" name="email" id="email" value="<?= get_var('email') ?>"
-                    placeholder="Email">
+                <input type="email" class="form-control" name="email" id="email" value="<?= get_var('email') ?>" placeholder="Email">
                 <?php if (isset($errors['email'])) : ?>
-                <span class="text-danger"><?= $errors['email'] ?></span>
+                    <span class="text-danger"><?= $errors['email'] ?></span>
                 <?php endif; ?>
             </div>
             <div class="login-input mb-3">
-                <input type="password" class="form-control" name="password" id="password"
-                    value="<?= get_var('password') ?>" placeholder="Mot de passe">
+                <div class="password-eye">
+                    <input type="password" class="form-control" name="password" id="password" value="<?= get_var('password') ?>" placeholder="Mot de passe">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="show-password" height="1.5em" viewBox="0 0 24 24">
+                        <path fill="var(--bs-gray-800)" d="M12 9.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5" />
+                        <path fill="var(--bs-gray-800)" fill-rule="evenodd" d="M12 5.5c-2.618 0-4.972 1.051-6.668 2.353c-.85.652-1.547 1.376-2.036 2.08c-.48.692-.796 1.418-.796 2.067c0 .649.317 1.375.796 2.066c.49.705 1.186 1.429 2.036 2.08C7.028 17.45 9.382 18.5 12 18.5c2.618 0 4.972-1.051 6.668-2.353c.85-.652 1.547-1.376 2.035-2.08c.48-.692.797-1.418.797-2.067c0-.649-.317-1.375-.797-2.066c-.488-.705-1.185-1.429-2.035-2.08C16.972 6.55 14.618 5.5 12 5.5M8.25 12a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hide-password" height="1.5em" viewBox="0 0 24 24">
+                        <path fill="var(--bs-gray-800)" fill-rule="evenodd" d="M20.53 4.53a.75.75 0 0 0-1.06-1.06l-16 16a.75.75 0 1 0 1.06 1.06l3.035-3.035C8.883 18.103 10.392 18.5 12 18.5c2.618 0 4.972-1.051 6.668-2.353c.85-.652 1.547-1.376 2.035-2.08c.48-.692.797-1.418.797-2.067c0-.649-.317-1.375-.797-2.066c-.488-.705-1.185-1.429-2.035-2.08c-.27-.208-.558-.41-.86-.601zm-5.4 5.402l-1.1 1.098a2.25 2.25 0 0 1-3 3l-1.1 1.1a3.75 3.75 0 0 0 5.197-5.197" clip-rule="evenodd" />
+                        <path fill="var(--bs-gray-800)" d="M12.67 8.31a.26.26 0 0 0 .23-.07l1.95-1.95a.243.243 0 0 0-.104-.407A10.214 10.214 0 0 0 12 5.5c-2.618 0-4.972 1.051-6.668 2.353c-.85.652-1.547 1.376-2.036 2.08c-.48.692-.796 1.418-.796 2.067c0 .649.317 1.375.796 2.066a9.287 9.287 0 0 0 1.672 1.79a.246.246 0 0 0 .332-.017l2.94-2.94a.26.26 0 0 0 .07-.23a3.75 3.75 0 0 1 4.36-4.36" />
+                    </svg>
+                </div>
                 <?php if (isset($errors['password'])) : ?>
-                <span class="text-danger"><?= $errors['password'] ?></span>
+                    <span class="text-danger"><?= $errors['password'] ?></span>
                 <?php endif; ?>
-                <svg class="show-password" viewBox=" 0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z">
-                    </path>
-                </svg>
             </div>
             <div class="remember-forgot small mb-3">
                 <label><input type="checkbox"> Me souvenir</label>
