@@ -28,7 +28,11 @@
                 <?php endif; ?>
             </div>
             <div class="remember-forgot small mb-3">
-                <label><input type="checkbox"> Me souvenir</label>
+                <div class="remember-me d-flex gap-2">
+                    <input id="remember-box" type="checkbox" class="hidden">
+                    <label for="remember-box" class="remember-box"></label>
+                    Me souvenir
+                </div>
                 <a href="#"> Mot de passe oublié</a>
             </div>
             <div class="mb-3">
